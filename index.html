@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Not Bombs St Andrews</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts for retro zine typewriter and bold title look -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400&family=Special+Elite&family=Dela+Gothic+One:wght@500;700;900&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        cream: '#f3f0e8',
+                        charcoal: '#1c1c1c',
+                        fnbgreen: '#2d7a46',
+                    },
+                    fontFamily: {
+                        mono: ['"Courier Prime"', 'Courier', 'monospace'],
+                        heading: ['"Dela Gothic One"', 'sans-serif'],
+                        zine: ['"Special Elite"', 'cursive', 'monospace']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #f3f0e8;
+            color: #1c1c1c;
+            font-family: 'Courier Prime', Courier, monospace;
+            cursor: url('smol_carrot.png') 0 0, auto;
+        }
+        .vintage-border {
+            border: 2px solid #1c1c1c;
+            box-shadow: 4px 4px 0px #1c1c1c;
+        }
+        .vintage-img {
+            border-radius: 1.5rem;
+            border: 2px solid #1c1c1c;
+            box-shadow: 5px 5px 0px rgba(0,0,0,0.8);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        .vintage-img:hover {
+            transform: translateY(-2px);
+            box-shadow: 7px 7px 0px rgba(0,0,0,0.9);
+        }
+        .link-pink {
+            color: #9F4688;
+            text-decoration: underline;
+            text-underline-offset: 3px;
+        }
+        .link-pink:hover {
+            color: #1a4f09;
+        }
+        .sticky-header {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background-color: rgba(243, 240, 232, 0.75);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px)
+        }
+    </style>
+</head>
+<body class="bg-cream text-charcoal min-h-screen flex flex-col justify-between selection:bg-black selection:text-cream">
+
+    <header class="sticky-header w-full max-w-5xl mx-auto px-4 sm:px-8 py-4 sm:py-6 flex items-center justify-between border-b-2 border-charcoal/20 mb-8 sm:mb-12">
+        <div class="flex items-center space-x-3">
+                <img src= fnb_logo.png alt="FNB St Andrews Logo" class="w-12 h-12 object-contain">
+            <span class="font-heading font-black tracking-wider text-lg sm:text-2xl md:text-3xl uppercase">Food Not Bombs St Andrews</span>
+        </div>
+        <div class="flex items-center space-x-3">
+            <a href="https://linktr.ee/foodnotbombsstandrews" aria-label="Linktree" class="hover:text-fnbgreen transition-colors">
+                <span class="block w-8 h-8 bg-current" style="-webkit-mask: url('linktree_logo.png') no-repeat center / contain; mask: url('linktree_logo.png') no-repeat center / contain;"></span>
+            </a>
+        </div>
+    </header>
+
+    <main class="w-full max-w-5xl mx-auto px-4 sm:px-8 space-y-16 sm:space-y-24 mb-20">
+
+        <!-- Section 1: Welcome -->
+        <section class="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
+            <div class="md:col-span-7 space-y-4">
+                <h2 class="font-heading font-black text-2xl sm:text-3xl tracking-tight leading-relaxed border-b-2 border-charcoal pb-2 inline-block">
+                    Welcome to FNB St Andrews!
+                </h2>
+                <p class="font-mono text-base sm:text-lg leading-relaxed text-charcoal/90">
+                    We are a local, autonomous mutual aid chapter, run entirely by volunteers, helping to provide free vegan meals for everyone from potential food surplus/waste! We are part of the worldwide, loosely linked network of <a href="https://foodnotbombs.net" target="_blank" class="link-pink">Food Not Bombs</a>.
+                </p>
+            </div>
+            <div class="md:col-span-5 flex justify-center">
+                <img src=signal-2026-02-14-17-26-07-335.jpg 
+                     onerror="this.src='https://placehold.co/600x400/2d7a46/f3f0e8?text=FNB+St+Andrews+Table'" 
+                     alt="Volunteers behind a Vegan and Halal Food and Drink table with green banner" 
+                     class="vintage-img w-full object-cover aspect-[4/3]">
+            </div>
+        </section>
+
+        <!-- Section 2: What we do -->
+        <section class="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
+            <div class="md:col-span-5 order-2 md:order-1 flex justify-center">
+                <img src= signal-2026-02-02-14-57-46-841.jpg 
+                     class="vintage-img w-full object-cover aspect-[4/3]">
+            </div>
+            <div class="md:col-span-7 order-1 md:order-2 space-y-4">
+                <h2 class="font-heading font-black text-2xl sm:text-3xl tracking-tight leading-relaxed border-b-2 border-charcoal pb-2 inline-block">
+                    What we do:
+                </h2>
+                <p class="font-mono text-base sm:text-lg leading-relaxed text-charcoal/90">
+                    Our community meal shares run every two weeks where our volunteers help to collect, store, cook and serve meals. We offer a variety of volunteering roles based on horizontal organising, meaning you can dedicate as little or as much time to any role you'd like!
+                </p>
+            </div>
+        </section>
+
+        <!-- Section 3: Want to get involved -->
+        <section class="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
+            <div class="md:col-span-7 space-y-4">
+                <h2 class="font-heading font-black text-2xl sm:text-3xl tracking-tight leading-relaxed border-b-2 border-charcoal pb-2 inline-block">
+                    Want to get involved?
+                </h2>
+                <p class="font-mono text-base sm:text-lg leading-relaxed text-charcoal/90">
+                    We're always looking to welcome new volunteers for a variety of roles, from meal prep to publicity. Join our <a href="#" class="link-pink font-semibold">Signal chat</a> and follow our Instagram account for more details!
+                </p>
+            </div>
+            <div class="md:col-span-5 flex justify-center">
+                <img src= signal-2025-09-11-18-11-01-578.jpg 
+                     onerror="this.src='https://placehold.co/600x400/333333/f3f0e8?text=Solidarity+Not+Charity'" 
+                     alt="Blackboard sign reading Solidarity Not Charity in a community space" 
+                     class="vintage-img w-full object-cover aspect-[4/3]">
+            </div>
+        </section>
+
+        <!-- Section 4: Organisation -->
+        <section class="bg-white/60 p-6 sm:p-8 vintage-border rounded-2xl space-y-4">
+            <h2 class="font-heading font-black text-xl sm:text-2xl tracking-tight leading-relaxed">
+                Are you a St Andrews-based organisation?
+            </h2>
+            <p class="font-mono text-base sm:text-lg leading-relaxed text-charcoal/90">
+                If you are a St Andrews-based shop, food outlet, or organisation that sometimes has surplus produce and/or vegan food, please get in touch at <a href="mailto:foodnotbombsstandrews@protonmail.com" class="link-pink break-all font-semibold">foodnotbombsstandrews@protonmail.com</a>!
+            </p>
+            <p class="font-mono text-base sm:text-lg leading-relaxed text-charcoal/90">
+                We would be happy to take it off your hands for our meal shares.
+            </p>
+        </section>
+
+    </main>
+
+    <footer class="w-full max-w-5xl mx-auto px-4 sm:px-8 py-8 border-t-2 border-charcoal/20 flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div class="font-heading font-bold text-lg uppercase tracking-wider">
+            FNB St Andrews
+        </div>
+        <div class="flex items-center space-x-6">
+            <a href="https://instagram.com/foodnotbombsstandrews/" aria-label="Instagram" class="hover:text-fnbgreen transition-colors flex items-center space-x-1 font-mono text-sm">
+                <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+            </a>
+            <a href="mailto:foodnotbombsstandrews@protonmail.com" aria-label="Email Food Not Bombs St Andrews" class="hover:text-fnbgreen transition-colors">
+                <span class="block w-8 h-8 bg-current" style="-webkit-mask: url('email_icon.png') no-repeat center / contain; mask: url('email_icon.png') no-repeat center / contain;"></span>
+            </a>
+
+            <a href="https://linktr.ee/foodnotbombsstandrews" aria-label="Linktree" class="hover:text-fnbgreen transition-colors">
+                <span class="block w-8 h-8 bg-current" style="-webkit-mask: url('linktree_logo.png') no-repeat center / contain; mask: url('linktree_logo.png') no-repeat center / contain;"></span>
+            </a>
+
+        </div>
+    </footer>
+
+</body>
+</html>
